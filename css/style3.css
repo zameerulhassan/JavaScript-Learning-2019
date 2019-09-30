@@ -1,0 +1,15 @@
+.divClass1{
+    color:blue;
+    border: 2px;
+    background:grey;
+    width: 50px;
+    height: 50px;
+}
+
+.divClass2{
+    color:blue;
+    border: 2px;
+    background: yellowgreen;
+    width: 100px;
+    height: 100px;
+}

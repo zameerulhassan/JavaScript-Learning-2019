@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+
+//method with object constructors i.e. function to create object. => it is a funtion - that is it. :)
+
+function Cars(brand, year, price){
+	this.brand= brand;
+	this.year=year;
+	this.price=price;
+	
+	//now the function
+	
+	//function1
+	this.autoPilot = function(){
+		document.write("The car has autopilot");
+	};
+	
+	//function2
+		this.startCar = function(){
+		return "The car started";
+	}
+};
+
+var c1 = new Cars("toyota", "2009", "23000");
+c1.autoPilot();
+document.write("<br>");
+document.write(c1.startCar());
+
+//adding new property to existing object
+
+Cars.fuel_type= "electic";
+document.write("<br>");
+document.write(Cars.fuel_type);
+//OR
+c1.fuel_type= "electic";
+document.write("<br>");
+document.write(c1.fuel_type);
+
+// adding new function
+ Cars.newFunc = function(){
+  document.write("I am new function");
+ }
+ document.write("<br>");
+ Cars.newFunc();
+ 
+//delete a property
+Cars.year;
+ document.write("<br>")
+ document.write(Cars.year);
+
+ 
+ //checking type of objct/prporty
+ 
+  document.write("<br>")
+ document.write(typeof(c1.brand));
+</script>
+<body>
+<h1></h1>
+
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

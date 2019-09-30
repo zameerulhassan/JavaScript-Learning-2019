@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function setNewImage(){
+ document.getElementById("oldImage").src="logo.png";
+ 
+
+}
+function setOldImage(){
+
+	document.getElementById("oldImage").src="nasri.jpg";
+}
+
+
+</script>
+<body>
+
+<img id= "oldImage" onmouseover = "setNewImage()" onmouseout = "setOldImage()" src="nasri.jpg" width="100" height ="100">
+<br>
+
+
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

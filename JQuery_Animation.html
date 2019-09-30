@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+<style>
+.divcube{
+    color:brown;
+    width: 100px;
+    height: 100px;
+    background-color:chartreuse;
+    opacity: 0.5;
+    position: absolute; /*because we need to relocate it, i.e. move it.*/
+    padding: 20px;
+    margin: 15px;
+}
+</style>
+</head>
+<script type="text/javascript">
+
+
+
+</script>
+<body>
+        <button id="btn1">click me1</button>
+        <button id="btn2">click me2</button>
+        <button id="btn3">click me3</button>
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+<p>para 1</p>
+<p>para 2</p>
+
+<div id="div1" class="divClass">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+<div id="div2" class="divClass2">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+<ul>
+<li id="item1">item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+<li>item 4</li>
+</ul>
+<div id="cube" class="divcube">
+        <p>CUBE</p>
+    </div>
+
+</body>
+
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+      
+        $("#btn3").click(function(){
+             //animate(takes 3 param, {1-css}, 2-time & 3-call back (optional))
+            $("#cube").animate({
+                left:'150px',
+                opacity:'1',
+                width:'150px',
+                height:'150px',
+
+
+
+            },1000)//we can also write ('slow'/'fast')
+           
+
+        });
+        
+    });
+     
+</script>
+</html>

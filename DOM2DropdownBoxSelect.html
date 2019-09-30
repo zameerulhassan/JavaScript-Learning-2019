@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+function func1(){
+ var selectDone = document.getElementById("selectBox");
+ alert(selectDone.options[selectDone.selectedIndex].value);
+ //select behaves like an array now.
+}
+
+
+
+</script>
+<body>
+
+
+<select id="selectBox">
+<option value="mangoes">Mangoes</option>
+<option value="oranges">Oranges</option>
+<option value="others">Others</option>
+</select>
+<br>
+<button onclick="func1()">click me </button>
+
+
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

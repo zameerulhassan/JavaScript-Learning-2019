@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function validate(){
+	var text = document.getElementById("text1").value;
+    var regEx=/^[4-9]\d{7}$/; //if ^ & $ ensures 1st and last digits only total is only 8 digits.
+    /*
+     regEx = ^[12345]$ => string can hold only 5 characters. starts from 1 and ends at 5 that is it.
+     \d => match any digits 0-9
+     \w => match any character 0-9 & a-z & A-Z & '_'
+     \s => match whitle space (including tabs)
+     \t => match tab only.
+
+    for mobile no.
+    [0-5][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9] : means first must be between 0-5 and then next 9 numbers from 0-9
+    we can write this as ;
+    [0-5][0-9]{9} => 0-9 is repeating only 9 times.
+    [0-5][0-9]{times repeated}
+    OR
+    [0-5][\d]{9}
+    BUT
+    if we enter something before and after this, it still validated. so
+
+
+    */
+    
+    if(regEx.test(text))
+    {
+        document.getElementById("label1").innerHTML="valid"
+        document.getElementById("label1").style.visibility="visible";
+        document.getElementById("label1").style.color="green";
+        v
+        
+    }
+    else{
+        document.getElementById("label1").innerHTML="invalid"
+        document.getElementById("label1").style.visibility="visible";
+        document.getElementById("label1").style.color="red";
+    }
+
+}
+
+
+
+</script>
+<body>
+
+<!--below return is used before calling validate function means, call it only when boolean is true.-->
+<form onsubmit= " return validate()" action="message.html"> <!--means when forms is validated, and submitted correctly, action is to visit page message.html-->
+<input id="text1" placeholder="cell number" type="text"/>
+<label id="label1" style="color:red; visibility:hidden;">INVALID</label>
+<br><br>
+<button onclick="validate()" type="button">Submit</button>
+
+</form>
+<br>
+
+<h1>zam</h1>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+//closure function
+function multiply(){
+    var a=1, b=2;
+    function add(){
+        return ((a+b)*(a+b));
+    }
+    return add;
+}
+var resultOfFun = multiply();
+//resultOfFun variable now acts as function because we place function in its value.
+//if we console.log(resultOfFun) without parenthesis it will return function literally.
+console.log(resultOfFun());
+
+</script>
+<body>
+<h1></h1>
+
+</body>
+
+</html>
+<!-- a function inside a function that relies on outside function's variables, 
+these variables (a, b) do not die out because thye are used inside inner function. -->

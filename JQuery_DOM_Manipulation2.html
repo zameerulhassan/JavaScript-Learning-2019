@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+<style>
+
+</style>
+</head>
+<script type="text/javascript">
+
+</script>
+<body>
+
+        
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+
+<div id="div1" class="divClass">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+<ul id="ulDiv">
+<li id="item1">item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+<li>item 4</li>
+</ul>
+<button id="btnApp">Append</button>
+<button id="btnAft">After</button>
+<button id="btnBefore">Before</button>
+<button id="btnPrepend">Prepend</button>
+<br>
+<br>
+<button id="btnRem">Remove</button>
+<button id="btnEmp">Empty</button>
+</body>
+<script src="jquery.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#btnApp").click(function(){
+            $("#div1").append("<h2>I am appended(within div) heading</h2>");
+            
+        })
+        $("#btnAft").click(function(){
+            $("#div1").after("<h2>I am after the dive heading</h2>");
+            
+        })
+        $("#btnBefore").click(function(){
+            $("#div1").before("<h2>I am before (out of div) heading</h2>");
+            
+        })
+        $("#btnPrepend").click(function(){
+            $("#div1").prepend("<h2>I am prepend (within div) the dive heading</h2>");  
+        })
+        //remove the div
+        $("#btnRem").click(function(){
+            $("#div1").remove();  
+            //you can remove a specific p by   $("p").remove("#para ID", "anyOther P to be removed")
+        })
+        //empty the div
+        $("#btnEmp").click(function(){
+            $("#div1").empty();  
+        })
+    });
+     
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function validate(){
+	var userName = document.getElementById("uName").value;
+	var password = document.getElementById("pass").value;
+
+    var regEx = /E00/; //setting regular expression to match...will check of user names contains this expression or not?
+    //if i write var regEx = /E00/i; => this will raise the flag of case insensitive. means e00=E00
+    if(regEx.test(userName))
+    {
+        alert("valid user name");
+    }
+    else{
+        alert("invalid user name");
+        document.getElementById("label1").style="color:red; visibility:visible;"
+    }
+
+}
+
+
+
+</script>
+<body>
+
+<!--below return is used before calling validate function means, call it only when boolean is true.-->
+<form onsubmit= " return validate()" action="message.html"> <!--means when forms is validated, and submitted correctly, action is to visit page message.html-->
+<input id="uName" placeholder="user name" type="text"/>
+<label id="label1" style="color:red; visibility:hidden;">INVALID</label>
+<br><br>
+<input id="pass" placeholder="password" type="password"/>
+
+<br><br>
+<button onclick="validate()" type="button">Submit</button>
+
+</form>
+<br>
+
+<h1>zam</h1>
+</body>
+
+</html>

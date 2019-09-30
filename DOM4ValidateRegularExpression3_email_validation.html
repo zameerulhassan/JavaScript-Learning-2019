@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function validate(){
+    var text = document.getElementById("text1").value;
+    //yourname @ domain . (extension). (extension-optional)
+    // 1       2            3               4
+    //1=any letters, dot and/or hyphen
+    //2=any letters, dot and/or hyphen
+    //3= any letters
+    //. then any letters
+    var regEx=/^([a-zA-Z0-9\.-]+@[a-zA-Z0-9-]+).([a-zA-Z]{2,8})(.[a-zA-Z]{2,8})$/; 
+    //if we write a.b => . can be replaced by any character i.e. awb or akb etc. that y we put \ before .
+    //[a-zA-Z0-9\.-{2, 15}] => min 2 and mx 15 characters. but this is hard coded.
+    // we can use [a-zA-Z0-9\.-]+   ==> this can be any length of characters.
+    //var regEx=/^([a-zA-Z0-9\.-]+@[a-zA-Z0-9-]+).([a-zA-Z]{2,8})(.[a-zA-Z]{2,8})?$/; 
+    //this ? marks makes the last extension optional            
+    if(regEx.test(text))
+    {
+        document.getElementById("label1").innerHTML="valid"
+        document.getElementById("label1").style.visibility="visible";
+        document.getElementById("label1").style.color="green";
+        v
+        
+    }
+    else{
+        document.getElementById("label1").innerHTML="invalid"
+        document.getElementById("label1").style.visibility="visible";
+        document.getElementById("label1").style.color="red";
+    }
+}
+</script>
+<body>
+<form> 
+<input id="text1" placeholder="Email" type="text"/>
+<label id="label1" style="color:red; visibility:hidden;">INVALID</label>
+<br><br>
+<button onclick="validate()" type="button">Submit</button>
+</form>
+<br>
+</body>
+
+</html>

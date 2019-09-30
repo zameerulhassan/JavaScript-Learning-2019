@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function validate(){
+	var userName = document.getElementById("uName");
+	var password = document.getElementById("pass");
+	
+	if(userName.value.trim()=="" || password.valuetrim()==""){ //trim() ensures not blanks/white spaces are used.
+		alert("no blank alowed");
+		return false; // we are returning a boolean to use it onsubmit button later
+	}
+	else
+	{
+		return true; // same here=> means if conditions above are true, return a true boolean value.s
+	}
+
+}
+
+
+
+</script>
+<body>
+
+<!--below return is used before calling validate function means, call it only when boolean is true.-->
+<form onsubmit= " return validate()" action="message.html"> <!--means when forms is validated, and submitted correctly, action is to visit page message.html-->
+<input id="uName" placeholder="user name" type="text"/>
+<br><br>
+<input id="pass" placeholder="password" type="password"/>
+
+<br><br>
+<button type="submit">Submit</button>
+
+</form>
+<br>
+
+
+</body>
+
+</html>

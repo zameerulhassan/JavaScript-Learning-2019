@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.structure.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.theme.css">
+
+<style>
+/*****************************/
+/*CSS*/
+
+/*CSS*/
+/****************************/
+</style>
+
+</head>
+<script type="text/javascript">
+//jquery-UI
+</script>
+<body>
+  
+<h1 id="heading1">JQuery User Interface</h1>
+<h2>Accordina Example</h2>
+<div id="div1" class="divClass1">
+   <label>Enter City Name</label>
+   <input type="text" name="" id="cityBox">
+</div>
+
+
+
+<br>
+<br>
+<div>
+
+
+</div>
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-UI\jquery-ui.js"></script>
+<script>
+    var myCitis=["Lethbridge","Layyah","Lahore", "Layalpur", "Multan", "MianWali"];
+    //this can be JSON array that can be fiteched from a link and them populated.
+  $("#cityBox").autocomplete(
+      {source: myCitis},
+      {autoFocus: true},
+      {delay:0},
+      {minLength:2}
+  );
+</script>
+</html>

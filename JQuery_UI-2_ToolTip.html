@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.structure.css">
+<link rel="stylesheet" href="jquery-UI/jquery-ui.theme.css">
+
+<style>
+/*****************************/
+/*CSS*/
+
+/*CSS*/
+/****************************/
+</style>
+
+</head>
+<script type="text/javascript">
+//jquery-UI
+</script>
+<body>
+  
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+<div id="myDiv">Select Date</div>
+<div id="div1" class="divClass1">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+
+<img src="logo.png" alt="LOGO" title="jubran-logo">
+<!--on hovering the image, very small text i.e. jubran-logo is displayed, we can increase this by ToolTip-->
+
+
+<br>
+<br>
+<div>
+
+
+</div>
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-UI\jquery-ui.js"></script>
+<script>
+  //exp 1
+    //$("img").tooltip();
+
+    //exp-2
+        //   $("img").tooltip({
+        //       track:true
+        //   });
+
+    //exp-3 . but for this, we need to have type must be set in the image
+    //   $("img").tooltip({
+    //       track:true,
+    //       content:"Jubran is the best"
+    //   });
+    
+    //exp-4
+        // $("img").tooltip({
+        //     //track:true,
+        //     content:"Jubran is the best",
+        //     show:{effect:"bounce", duration:5000}//this is complex option to use {}
+        // });
+
+    //exp-5
+        // $("img").tooltip({
+        //     //track:true,
+        //     content:"Jubran is the best",
+        //     show:{effect:"pulsate", duration:5000}//this is complex option to use {}
+        // });
+
+    //     //exp-6
+    //     $("img").tooltip({
+    //     //track:true,
+    //     content:"Jubran is the best",
+    //     show:{effect:"highlight", duration:5000}//this is complex option to use {}
+    // });
+
+    //    //exp-7
+    //    $("img").tooltip({
+    //     //track:true,
+    //     content:"Jubran is the best",
+    //     show:{effect:"explode", duration:1000}//this is complex option to use {}
+    // });
+
+      //exp-8
+      $("img").tooltip({
+        //track:true,
+        content:"Jubran is the best",
+        show:{effect:"bounce", duration:1000},
+        hide:{effect:"explode", duration:1000}
+    });
+</script>
+</html>

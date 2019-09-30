@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+
+//literal way of creating objects;
+// this method does not have object constructors.
+var Car ={
+brand: "Tesla",
+year: "2001",
+price:"35000",
+
+autoPilot : function(){
+return "The car has autopilot";
+}
+}
+
+document.write("<h1>"+Car.price+ "</h1>");
+
+document.write(Car.autoPilot());
+
+</script>
+<body>
+<h1>I am H1 hard coded</h1>
+<script>
+   
+document.write("<h1>"+Car["year"]+ "</h1>");
+
+document.write(Car.autoPilot()); 
+
+</script>
+    
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

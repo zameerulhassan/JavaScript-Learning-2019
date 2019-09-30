@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+
+<script type="text/javascript">
+var width =100;
+var difference=2;
+var intervalID=0;
+
+function increase()
+{
+    intervalID = setInterval(zoomIn,20);
+}
+
+function zoomIn()
+{
+    if(width<200)
+    {
+        width = width + difference;
+        document.getElementById("img1").style.width=width;
+        console.log(width);
+    }
+    else{
+        clearInterval(intervalID);
+    }
+}
+</script>
+
+<body>
+<br>
+<br>
+<br>
+<img onmouseover="increase()" onmouseout="decrease()" id="img1" src="heart.png" width="100"/>
+
+</body>
+</html>

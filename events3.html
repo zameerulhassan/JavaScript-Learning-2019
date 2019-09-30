@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function func1(){
+var str = document.getElementById("input1").value;
+alert("your entered " +str);
+}
+
+
+
+</script>
+<body>
+
+<input id="input1" placeholder="enter something here">
+<br>
+<button onclick="func1()">click me </button>
+
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+
+
+</script>
+<body>
+        <button id="btn1">click me1</button>
+        <button id="btn2">click me2</button>
+        <button id="btn3">click me3</button>
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+<p>para 1</p>
+<p>para 2</p>
+
+<div id="div1" class="divClass">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+<div id="div2" class="divClass2">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+<ul>
+<li id="item1">item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+<li>item 4</li>
+</ul>
+</body>
+
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#heading1").slideUp();
+        });
+
+        $("#btn2").click(function(){
+            $("#heading1").slideDown();
+        });
+
+            //toggle combines both hide/show
+            //fadeOut/fadeIn("slow"/"fast"/milliseconds)
+        $("#btn3").click(function(){
+            $("#heading1").slideToggle();
+        });
+        
+    });
+     
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function changeStyle(){
+ var paras = document.getElementsByTagName("p"); // select all p tags on document
+ // paras is collection of arrays now.
+	paras[0].style.color="red";
+	paras[1].style.fontSize="35px";
+	paras[2].style.color="blue";
+	paras[3].style.fontWeight="bold";
+ 
+//for loop can be used to manipulate the array 
+}
+
+
+
+</script>
+<body>
+<p> para 1</p>
+<p> para 2</p>
+<p> para 3</p>
+<p> para 4</p>
+
+
+<br>
+<button onclick="changeStyle()">click me </button>
+
+
+</body>
+
+</html>
+<!--
+if a variable is define without using var keyword, it becomes global variable automaticaly.
+however if this global variable is defined inside a function it will be global but not accessible outside of function.
+-->

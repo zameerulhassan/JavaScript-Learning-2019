@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+var ID =0;
+function printMsg(){
+    document.getElementById("op").innerHTML="5 seconds have passed";
+}
+function start(){
+    ID=window.setTimeout(printMsg, 5000); 
+    //this ID is required to measure time that will be used in stop()
+    //if we don't need stop(), we can write line #12 as. 
+    //window.setTimeout(printMsg, 5000);
+}
+
+function stop(){
+    window.clearTimeout(ID);
+}
+</script>
+<body>
+<button onclick="start()" id="btnAdd">Start</button>
+<h1 id="op">Some Text</h1>
+<button onclick="stop()" id="btnStop">Stop</button>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+<style>
+.divcube{
+    color:brown;
+    width: 100px;
+    height: 100px;
+    background-color:chartreuse;
+    opacity: 0.5;
+    position: absolute; /*because we need to relocate it, i.e. move it.*/
+    padding: 20px;
+    margin: 15px;
+}
+</style>
+</head>
+<script type="text/javascript">
+
+
+
+</script>
+<body>
+
+        
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+<p>para 1</p>
+<p>para 2</p>
+
+<div id="div1" class="divClass">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+<div id="div2" class="divClass2">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+<ul id="ulDiv">
+<li id="item1">item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+<li>item 4</li>
+</ul>
+<button id="btn1">Click Me</button>
+<div id="cube" class="divcube">
+        <p>CUBE</p>
+    </div>
+
+</body>
+
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            // example 1 
+            //$("#item1").text("Hello World"); 
+            
+            // example 2   
+            //alert($("#item1").text();
+            
+            // example 3
+            //var txt=$("#item1").text();
+            //alert(txt);
+            //so, text() is getter and text("some new text") is setter
+
+            //html() 
+            //if you want to manipulate/change html tags
+            // use html instead of text() 
+            //$("#item1").html("<b>hello there</b>");
+            
+            //attr()
+            //alert($("#div2").attr("class"));
+            //how to change a class/or any attribute of css 
+            //($("#div2").attr("class", "newClassName"));
+               //css()
+               //alert($("#div2").css("color")); //OR
+               alert($("#div2").css("font-family"));
+               //changing css value
+               //($("#div2").css("font-size", "25px"));
+        })
+    });
+     
+</script>
+</html>

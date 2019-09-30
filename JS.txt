@@ -1,0 +1,59 @@
+Syntax Parsers: 
+validates its grammer is correct, so compilers reads the code and compiles and does what is intended to do
+
+Execution Contexts:
+a wrapper to help manage running the code. which one is currently running, it managed by execution context. i.e.
+a section of code that is running.
+
+Lexical Environments:
+where something sits physically in the code that you write.
+
+Object: a collection of name value pairs.
+
+Address:
+{
+	Street: 'Albadr masjid'
+	Number: 100
+	Apartment:
+	 {
+		Floor: 3,
+		Number: 301
+	 }	
+}
+value could be another list of name/value pairs.
+Address is collection of name/value pairs 
+street is name, its value is Main,
+Number is Name, its value is 100,
+Apartment is Name but it values is another list of name/value pairs.
+
+so: value (of a name) could be another collection of name/value pairs.
+so: address is name and its value is an object, Apartment> its value is an object.
+
+
+Execution Contexts(Global or Base):
+creates 2 things.
+1- Global Object, accessible to/from everywhere i.e windows object
+2- 'this' a special variable (window same object) at global level 
+ windows (global object) = this (variable)
+these 2 things are created by javascript engine for you.
+Global- not inside a function- that is it for JS not more than that.
+
+Creation and Hoisting:
+execution context is created i.e.
+global object
+this
+ourter Environment
+actually it sets up memory space for vairables and Functions that is called "Hoisting". at this stage engine just allocate memory space, it does not know its value yet.ALL variables are initially set to 'undefined' later they are assigned values.but functions are sitting in memory in thier entirety.(Hoisting), so actually 'undefined' is a special value given to all variables initially, if the variable is declared but not given value. however if the varialbe is not declared, JS will throw a error.
+
+
+
+
+
+
+
+
+
+
+
+
+

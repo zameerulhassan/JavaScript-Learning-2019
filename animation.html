@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+</script>
+<script>
+var width =100;
+var difference=2;
+var intervalID=0;
+function increase()
+{
+    ID=setInterval(zoomIn,20);
+    
+}
+function zoomIn()
+{
+   //alert("test");
+   
+    if(width<200)
+    {
+        width=width+difference;
+        document.getElementById("image1").style.width=width;
+        console.log(width);
+        alert("test");
+    }
+    else
+    {
+        clearInterval(ID);
+    }
+}
+function decrease()
+{
+    ID=setInterval(zoomOut,20);
+}
+function zoomOut()
+{
+    if(width>100)
+    {
+        width=width-difference;
+        document.getElementById("image1").style.width=width;
+        console.log(width);
+    }
+    else
+    {
+        clearInterval(ID);
+    }
+}
+</script>
+<body>
+<img onmouseover="increase()" onmouseout="decrease()" id="image1" src="heart.png" width="100"/>
+
+</body>
+</html>

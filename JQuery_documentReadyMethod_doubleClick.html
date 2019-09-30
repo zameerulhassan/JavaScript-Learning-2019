@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+
+
+</script>
+<body>
+<h1 id="heading1">Heading 1</h1>
+<h2>Heading 2</h2>
+<p>para 1</p>
+<p>para 2</p>
+<button id="btn1">click me</button>
+<div id="div1" class="divClass">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+
+<div id="div2" class="divClass2">
+    <p>para 1 in div</p>
+    <p>para 2 in div</p>
+</div>
+<ul>
+<li id="item1">item 1</li>
+<li>item 2</li>
+<li>item 3</li>
+<li>item 4</li>
+</ul>
+</body>
+
+<script src="jquery.js"></script>
+<script>
+//commonly this method is called means that it is called when all the document i.e hml is loaded
+//$(document).ready(call a function);
+//$(document).ready(function(){});
+//$(document).ready(call a function);
+//so
+
+    $(document).ready(function(){
+
+        $("button").dblclick(function(){
+            $("li").fadeToggle();
+        });
+    }
+    );
+     
+</script>
+</html>

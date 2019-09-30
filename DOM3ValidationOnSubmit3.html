@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First JS Program</title>
+</head>
+<script type="text/javascript">
+
+function validate(){
+	var userName = document.getElementById("uName");
+	var password = document.getElementById("pass");
+	
+	if(userName.value.trim()==""){ //trim() ensures not blanks/white spaces are used.
+		uName.style.border ="solid 5px red"; //manipulating css
+		document.getElementById("label1").style.visibility="visible";
+		return false; // we are returning a boolean to use it onsubmit button later
+	}
+	else if(password.value.trim()==""){
+		alert("password can not be blank");
+		pass.style.border ="solid 5px red"; //manipulating css
+		return false;
+	}
+	else if(password.value.trim().length<5){
+		alert("password must be five character long");
+		uName.style.border ="solid 5px red"; //manipulating css
+		pass.style.border ="solid 5px red"; //manipulating css
+		return false;
+	}
+	else{
+		return true; // same here=> means if conditions above are true, return a true boolean value.s
+	}
+
+}
+
+
+
+</script>
+<body>
+
+<!--below return is used before calling validate function means, call it only when boolean is true.-->
+<form onsubmit= " return validate()" action="message.html"> <!--means when forms is validated, and submitted correctly, action is to visit page message.html-->
+<input id="uName" placeholder="user name" type="text"/>
+<label id="label1" style="color:red; visibility:hidden;">INVALID</label>
+<br><br>
+<input id="pass" placeholder="password" type="password"/>
+
+<br><br>
+<button type="submit">Submit</button>
+
+</form>
+<br>
+
+<h1>zam</h1>
+</body>
+
+</html>
