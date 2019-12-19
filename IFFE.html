@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script type="text/javascript">
+var x =function plus(a, b){
+    return(
+        console.log(a+b),
+        console.log(this), //returns windows (global object).
+        console.log(arguments)//returns array like object. all arguements passed.
+    )
+}(3,5); //calling immediately with the definition by adding () after definition.
+
+//plus(2,5);
+</script>

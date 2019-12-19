@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script type="text/javascript">
+
+var bubble ={
+    x:300,
+    y:200,
+}
+
+function setup(){
+    createCanvas(600,400);
+}
+function draw(){
+    background(0);
+    move();
+    display();
+}
+function show(){
+    stroke(255);
+    strokeWeight(4);
+    noFill();
+    ellips(bubble.x, bubble.y, 24, 24);
+}
+function move(){
+    bubble.x=bubble.x+random(-5,5);
+    bubble.y=bubble.y+random(-5,5);
+}
+</script>

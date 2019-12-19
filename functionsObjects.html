@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //calc is set as an object
+    //status is a projecty of the object.
+    //function (ananamous) is method of the object
+var calc = {
+    status: 'Awesome',
+    plus: function(a,b){
+        return(
+            console.log(this),
+            console.log(a+b),
+            console.log(arguments),
+            console.log(this.status)
+        )
+    }
+}
+calc.plus(3,5); //instantiating this object.
+//invoking by using dot notation.
+//instead of global object, it is returning the object that has this function.
+</script>
