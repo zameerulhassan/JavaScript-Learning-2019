@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>My First JS Program</title>
-<link rel="stylesheet" href="css/style1.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="jquery-UI/jquery-ui.css">
 <link rel="stylesheet" href="jquery-UI/jquery-ui.structure.css">
 <link rel="stylesheet" href="jquery-UI/jquery-ui.theme.css">
@@ -24,15 +24,40 @@
 <h1 id="heading1">JQuery User Interface</h1>
 <h2>Accordina Example</h2>
 <div id="div1" class="divClass1">
-    <h2>Mangoes</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum div</p>
-    <h2>Oranges</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-        
-    </p>
-    <h2>Strawberry</h2>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum div</p>
-
+    <h2>Fron End</h2>
+    <ul>
+      <li>HTML5/CSS3/SASS/Bootstrap</li>
+      <li>React / Angular</li>
+      <li>javascript/JQuery</li>
+    </ul>
+    <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum div</p> -->
+    <h2>Back End</h2>
+    <ul>
+      <li>ES-6</li>
+      <li>Apache/PHP (LAMP) </li>
+      <li>C# / Java / C++/ .Net ASP</li>
+    </ul>
+    <h2>Programming</h2>
+    <div>
+    <ul>
+      <li>Mobile App</li>
+      <li>Python / .Net Framework </li>
+      <li>Databases (MySQL, MS SQL, Oracle)</li>
+    </ul>
+    </div>
+    <h2>Uitilities</h2>
+    <ul>
+      <li>Git /GitHub</li>
+      <li>Jira </li>
+      <li>utility2</li>
+    </ul>
+    <h2>Other Skills</h2>
+    <ul>
+      <li>PMP - Training.</li>
+      <li>Agile Methodology </li>
+      <li>Sprint Management</li>
+    </ul>
+    
 </div>
 
 
@@ -60,15 +85,17 @@
 
 
 //exp- 3
+//applied to block level i.e. div
+//1st block level becomes heading, child block level become details.
  $("#div1").accordion({
      collapsible:true,
-     event:"click", //OR mouseover
+     event:"mouseover", //OR click
      //to control animation time
      //animate:2000,
      active:1, //index 1 i.e. 2nd element will always be open
-     heightStyle:true, //to make hight size according to test within the element.
+     heightStyle:true, //to make hight size according to text within the element.
      //icon left of heading can also controlled 
-     icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+     //icons:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
  }); 
 </script>
 </html>

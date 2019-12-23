@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var kung = function(){
+    console.log('I am a function');
+}
+kung();
+
+var kung2 = function(){
+    console.log('I am 2nd function');
+}();//IFFE
+
+(function(){
+    console.log('I am 3rd function');
+})();
+//once IFFE is created, put function into ()
+//this is ananmous closure or self executing function.
+//BTW any variable created without var key word, it will be global variable.
+</script>
