@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = 30;
+        let name = 'Zam';
+        //1- use of back-tick
+        console.log(`My name is ${name} and my age is ${age}`);
+        let myName ='zameer ul hassan';
+        //2- string properties.
+        console.log(myName.toUpperCase());
+        console.log(myName.substring(0,9).toUpperCase());
+        console.log(myName.split("")); //split each char
+        console.log(myName.split(" ")); //split by space
+        //arrays
+        const fruits = ['f1','f2','f3'];
+        console.log(fruits);
+        fruits[3]="oranges";
+        fruits[2]='mangoes';
+        fruits.push('grapes'); //adds at end
+        console.log(fruits);
+        //we still can manipulate items of arrays, even if it is const, we can not defined it again.
+        fruits.unshift('berries');
+        console.log(fruits);
+        fruits.pop();//remove last one.
+        console.log(fruits);
+        //to check if it is an array ?
+        console.log(Array.isArray(fruits));
+        console.log(Array.isArray(myName));
+        //indexOf
+        console.log(fruits.indexOf("mangoes"));
+        //object literals
+        const Person = {
+            firstName:"Zam",
+            lastName: 'hassan',
+            age: 30,
+            hobbies: ['reading', 'walking', 'sleeping'],
+            address:{
+                city:'lethbridge',
+                street: '23rd Ave'
+            }
+        };
+        console.log(Person); //prints all properties.
+        console.log(typeof(Person)); //object
+        //dot operators.
+        console.log(Person.hobbies[1]);
+        console.log(Person.address.street);
+        //we can pull out like this.
+        const {firstName, lastName} = Person;
+        console.log(firstName);
+        //note the firstName & lastName are variables and pulling value from Person.
+        //for an embedded object
+        //we can do
+        const {address:{city}} = Person;
+        console.log(city);
+        //we can add properties
+        Person.email='zam@123.com';
+        console.log(Person.email);
+        console.log(Person);
+        //arrays of objects
+        const todos=[
+            {
+                id:1,
+                text:'Take out trash',
+                isCompleted: true
+            },
+            {
+                id:2,
+                text:'Hug me',
+                isCompleted: false
+            },
+            {
+                id:3,
+                text:'Kiss me',
+                isCompleted: true
+            }
+        ];
+        console.log(todos);
+        console.log(todos[1].text);
+        //JSON free converter: https://www.freeformatter.com/json-formatter.html
+        //converting into JSON data
+        const todosJSON = JSON.stringify(todos);
+        console.log(todosJSON);
+        //for loop
+        for(let todo of todos){
+            //console.log(todo);
+            console.log(todo.text);
+        }
+        //also there are hig-order array methods
+        // foreach, map, filter
+        todos.forEach(function(todo){
+            //console.log(todo); //todo is functional variable
+            console.log(todo.text);
+        });
+        //map
+        //map returns an array
+        const todosText= todos.map(function(todo){
+            return todo.text;
+        });
+        console.log(todosText);
+        //filters
+        const todosCompleted = todos.filter(function(todo){
+            return todo.isCompleted===true;
+        });
+        console.log(todosCompleted);
+        // we can chain more functions like maps
+        const todosCompleted2 = todos.filter(function(todo){
+            return todo.isCompleted===true;
+        }).map(function(todo){
+            return todo.text;
+        });
+        console.log(todosCompleted2);
+
+        //*******Constructor Objects*******
+        //1- ES-5 (pre-classes)constructor functions with prototypes
+        //2- ES-6 (2015) using classes.
+        function Student(fName, lName, dob){
+            this.fname=fName;
+            this.lName=lName;
+            this.dob= new Date(dob);//to change from string to date object
+            //to add methods
+            this.getBirthYear = function(){
+                return this.dob.getFullYear();
+            }
+            this.fullName= function(){
+                return `${this.fname} ${this.lName}`;
+            };
+
+        };
+        //instantiate
+         const student1 = new Student('Zam','Hassan','5-8-1973');
+         console.log(student1.dob);
+         console.log(student1.dob.getFullYear());
+        //calling its function
+        console.log(student1.getBirthYear());
+        console.log(student1.fullName());
+        //when we print this object, it gives all its functions in the print array i.e. not under proto-type 
+        console.log(student1);
+        //to avoid this, we can add a function by using proto type
+         Student.prototype.anotherFunction = function(){
+            return(`Hello ${this.fname}`);
+         };
+
+         console.log(student1.anotherFunction());
+
+         //class
+         class Teacher{
+             constructor(fName, lName, dob){
+                this.fName=fName;
+                this.lName=lName;
+                this.dob=new Date(dob);
+
+             }
+             getBirthYear(){
+                 return this.dob.getFullYear();
+             }
+             getFullName(){
+                 return(`${this.fName} ${this.lName}`);
+             }
+         };
+         const teacher1= new Teacher('maani','hassan', '12-17-2013');
+         console.log(teacher1.getFullName());
+         console.log(teacher1.getBirthYear());
+
+         //DOM
+         //single element selectors
+         //all documents OBJECTS like 
+         //document.getElementById
+         //document.querySelector(.class OR h1)
+         //multiple element selectors
+         //document.querySelectorAll('.item') //list it give back array
+         // https://www.youtube.com/watch?v=hdI2bqOjy3c&t=3795s
+
+
+    </script>
+</body>
+</html>
